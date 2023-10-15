@@ -1,11 +1,11 @@
 $(document).ready(function() {
 
   $('.row').on('click', '.btnSubmit', function(){
-    let username = $('#username').val
-    let password = $('#password').val
-    let name = $('#name').val
-    let surname = $('#surname').val
-    let email = $('#email').val
+    let username = $('#username').val()
+    let password = $('#password').val()
+    let name = $('#name').val()
+    let surname = $('#surname').val()
+    let email = $('#email').val()
 
     const item = {
       'username': username,
