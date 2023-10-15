@@ -3,7 +3,7 @@ const mongoose = require('mongoose')
 const cors = require('cors')
 
 const app = express()
-const PORT = 3000
+
 
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
@@ -32,7 +32,7 @@ app.use(cors({
 app.use('/', express.static('files'))
 
 app.use('/api/users', user)
-// app.use('/api/products'. product)
+app.use('/api/products', product)
 app.use('/api/user-products', userProducts)
 
 app.use('/api-docs',
@@ -40,6 +40,4 @@ app.use('/api-docs',
   swaggerUI.setup(swaggerDocument.options)
 )
 
-app.listen(PORT, () =>{
-  console.log(`Listening on PORT ${PORT}, http://localhost:${PORT}`)
-})
+module.exports = app
