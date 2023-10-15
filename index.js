@@ -29,6 +29,7 @@ app.use(cors({
   origin: ['http://localhost:3000', 'http://localhost:8000']
 }))
 
+// static files - html files etc
 app.use('/', express.static('files'))
 
 app.use('/api/users', user)
