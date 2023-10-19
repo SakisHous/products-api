@@ -34,18 +34,18 @@ const logger = createLogger({
       filename: "logs/error.log"
     }),
     new transports.Console(),
-    new transports.MongoDB({
-      level: "error",
-      db: process.env.MONGODB_URI,
-      options: {
-        useUnifiedTopology: true
-      },
-      collection: "server_logs",
-      format: format.combine(
-        format.timestamp(),
-        format.json()
-      )
-    })
+    // new transports.MongoDB({
+    //   level: "error",
+    //   db: process.env.MONGODB_URI,
+    //   options: {
+    //     useUnifiedTopology: true
+    //   },
+    //   collection: "server_logs",
+    //   format: format.combine(
+    //     format.timestamp(),
+    //     format.json()
+    //   )
+    // })
   ]
 })
 
